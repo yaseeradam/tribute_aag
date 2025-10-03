@@ -16,6 +16,7 @@ export type Institution = {
   id: string;
   name: string;
   description: string;
+  website: string;
 };
 
 export type ImagePlaceholder = {

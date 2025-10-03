@@ -55,22 +55,26 @@ export const institutions: Institution[] = [
   {
     id: "institution-1",
     name: "Maryam Abacha American University of Nigeria",
-    description: "A leading private university in Kano, Nigeria, offering a diverse range of undergraduate and postgraduate programs with a focus on innovation and research."
+    description: "A leading private university in Kano, Nigeria, offering a diverse range of undergraduate and postgraduate programs with a focus on innovation and research.",
+    website: "#"
   },
   {
     id: "institution-2",
     name: "Maryam Abacha American University of Niger",
-    description: "The premier English-speaking university in Maradi, Niger Republic, known for its quality education and vibrant international student community."
+    description: "The premier English-speaking university in Maradi, Niger Republic, known for its quality education and vibrant international student community.",
+    website: "#"
   },
   {
     id: "institution-3",
     name: "Franco-British International University, Kaduna",
-    description: "An innovative institution in Kaduna, Nigeria, bridging linguistic divides by offering bilingual education in French and English."
+    description: "An innovative institution in Kaduna, Nigeria, bridging linguistic divides by offering bilingual education in French and English.",
+    website: "#"
   },
   {
     id: "institution-4",
     name: "Canadian University of Bangladesh",
-    description: "A notable international venture, reflecting a commitment to global education and fostering ties between nations through academic excellence."
+    description: "A notable international venture, reflecting a commitment to global education and fostering ties between nations through academic excellence.",
+    website: "#"
   }
 ];
 

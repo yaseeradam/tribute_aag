@@ -1,8 +1,10 @@
 import Image from "next/image";
+import Link from "next/link";
 import { institutions } from "@/lib/data";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { University } from "lucide-react";
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { ArrowRight, University } from "lucide-react";
 
 export default function InstitutionsPage() {
   return (
@@ -46,6 +48,13 @@ export default function InstitutionsPage() {
                     {institution.description}
                   </p>
                 </CardContent>
+                <CardFooter>
+                    <Button asChild className="w-full">
+                        <Link href={institution.website} target="_blank" rel="noopener noreferrer">
+                            Visit Website <ArrowRight className="ml-2 h-5 w-5" />
+                        </Link>
+                    </Button>
+                </CardFooter>
               </Card>
             );
           })}
