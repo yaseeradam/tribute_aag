@@ -1,5 +1,6 @@
 import { achievements } from "@/lib/data";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { cn } from "@/lib/utils";
 
 export default function AchievementsPage() {
   return (
@@ -20,20 +21,20 @@ export default function AchievementsPage() {
           <div className="space-y-12">
             {achievements.map((achievement, index) => (
               <div key={achievement.title} className="md:grid md:grid-cols-2 md:gap-x-12 relative">
-                <div className={cn("hidden md:flex items-center", index % 2 === 0 ? "justify-end" : "justify-start col-start-2")}>
-                  {index % 2 === 0 && <TimelineContent achievement={achievement} index={index} />}
+                <div className={cn("flex items-center", index % 2 === 0 ? "justify-end" : "justify-start col-start-2")}>
+                  <TimelineContent achievement={achievement} index={index} />
                 </div>
 
                 <div className="hidden md:flex justify-center items-center">
                    <div className="h-6 w-6 rounded-full bg-accent border-4 border-background z-10"></div>
                 </div>
 
-                <div className={cn("md:hidden")}>
-                  <TimelineContent achievement={achievement} index={index} />
-                </div>
-                
-                <div className={cn("hidden md:flex items-center", index % 2 !== 0 ? "justify-start" : "justify-end col-start-1 row-start-1")}>
-                  {index % 2 !== 0 && <TimelineContent achievement={achievement} index={index} />}
+                <div className={cn("flex items-center", index % 2 !== 0 ? "justify-start" : "justify-end col-start-1 row-start-1")}>
+                  {index % 2 !== 0 && (
+                    <div className="md:hidden">
+                       <TimelineContent achievement={achievement} index={index} />
+                    </div>
+                  )}
                 </div>
               </div>
             ))}
@@ -48,7 +49,6 @@ function TimelineContent({ achievement, index }: { achievement: (typeof achievem
   const Icon = achievement.icon;
   const alignment = index % 2 === 0 ? 'md:text-right' : 'md:text-left';
   const cardAlignment = index % 2 === 0 ? 'md:items-end' : 'md:items-start';
-  const timeAlignment = index % 2 === 0 ? 'md:text-left' : 'md:text-right';
 
   return (
     <Card className="w-full shadow-lg hover:shadow-xl transition-shadow duration-300">
@@ -66,10 +66,4 @@ function TimelineContent({ achievement, index }: { achievement: (typeof achievem
       </CardContent>
     </Card>
   );
-}
-
-// Helper to use cn in server components
-function cn(...inputs: any[]) {
-  const classNames = inputs.filter(Boolean);
-  return classNames.join(' ');
 }
