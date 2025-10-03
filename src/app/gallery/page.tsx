@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 import {
@@ -7,11 +9,26 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
+import { useState } from "react";
+import { Button } from "@/components/ui/button";
+
+const INITIAL_IMAGE_COUNT = 8;
+const IMAGES_TO_LOAD = 4;
 
 export default function GalleryPage() {
   const galleryImages = PlaceHolderImages.filter((img) =>
     img.id.startsWith("gallery-")
   );
+
+  const [visibleCount, setVisibleCount] = useState(INITIAL_IMAGE_COUNT);
+
+  const visibleImages = galleryImages.slice(0, visibleCount);
+
+  const handleLoadMore = () => {
+    setVisibleCount(
+      (prevCount) => prevCount + IMAGES_TO_LOAD
+    );
+  };
 
   return (
     <div className="animate-in fade-in duration-500">
@@ -26,7 +43,7 @@ export default function GalleryPage() {
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-          {galleryImages.map((image) => (
+          {visibleImages.map((image) => (
             <Dialog key={image.id}>
               <DialogTrigger asChild>
                 <div className="relative aspect-video w-full rounded-lg overflow-hidden cursor-pointer group shadow-md hover:shadow-xl transition-shadow">
@@ -60,6 +77,14 @@ export default function GalleryPage() {
             </Dialog>
           ))}
         </div>
+
+        {visibleCount < galleryImages.length && (
+          <div className="text-center mt-12">
+            <Button onClick={handleLoadMore} size="lg">
+              Load More
+            </Button>
+          </div>
+        )}
       </div>
     </div>
   );
