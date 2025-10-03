@@ -1,3 +1,106 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "hero-portrait",
+      "description": "An elegant portrait of Prof. Adamu Abubakar Gwarzo",
+      "imageUrl": "https://images.unsplash.com/photo-1624395213043-fa2e123b2656?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxtYW4lMjBwb3J0cmFpdHxlbnwwfHx8fDE3NTk0NzE4Mzd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "man portrait"
+    },
+    {
+      "id": "about-portrait",
+      "description": "Prof. Gwarzo at a conference",
+      "imageUrl": "https://images.unsplash.com/photo-1562788869-4ed32648eb72?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxtYW4lMjBwcm9mZXNzaW9uYWx8ZW58MHx8fHwxNzU5NDIyMTE4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "man professional"
+    },
+    {
+      "id": "institution-1",
+      "description": "View of Maryam Abacha American University of Nigeria campus",
+      "imageUrl": "https://images.unsplash.com/photo-1603857365671-93cd96dc1df8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8dW5pdmVyc2l0eSUyMGNhbXB1c3xlbnwwfHx8fDE3NTk0OTk3NTJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "university campus"
+    },
+    {
+      "id": "institution-2",
+      "description": "View of Maryam Abacha American University of Niger campus",
+      "imageUrl": "https://images.unsplash.com/photo-1590231204765-12b10cedb4fa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHx1bml2ZXJzaXR5JTIwYnVpbGRpbmd8ZW58MHx8fHwxNzU5NDI3MTkxfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "university building"
+    },
+    {
+      "id": "institution-3",
+      "description": "View of Franco-British International University, Kaduna",
+      "imageUrl": "https://images.unsplash.com/photo-1615406020658-6c4b805f1f30?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBidWlsZGluZ3xlbnwwfHx8fDE3NTk0Nzg2ODJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "modern building"
+    },
+    {
+      "id": "institution-4",
+      "description": "View of Canadian University of Bangladesh",
+      "imageUrl": "https://images.unsplash.com/20/cambridge.JPG?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxjb2xsZWdlJTIwYnVpbGRpbmd8ZW58MHx8fHwxNzU5NDI3MzcyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "college building"
+    },
+    {
+      "id": "gallery-1",
+      "description": "Prof. Gwarzo speaking at an event",
+      "imageUrl": "https://images.unsplash.com/photo-1558008322-ab6d05b143ae?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxtYW4lMjBzcGVha2luZ3xlbnwwfHx8fDE3NTk1MjkwMTN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "man speaking"
+    },
+    {
+      "id": "gallery-2",
+      "description": "Group photo with dignitaries",
+      "imageUrl": "https://images.unsplash.com/photo-1549341100-8c1a030b349b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxncm91cCUyMHBob3RvfGVufDB8fHx8MTc1OTQ4ODg3MHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "group photo"
+    },
+    {
+      "id": "gallery-3",
+      "description": "Receiving an award",
+      "imageUrl": "https://images.unsplash.com/photo-1594122230689-45899d9e6f69?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxhd2FyZCUyMGNlcmVtb255fGVufDB8fHx8MTc1OTUyOTAxMnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "award ceremony"
+    },
+    {
+      "id": "gallery-4",
+      "description": "Interacting with students",
+      "imageUrl": "https://images.unsplash.com/photo-1662327656883-ae02199eadfc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHx0ZWFjaGVyJTIwc3R1ZGVudHN8ZW58MHx8fHwxNzU5NDQ5OTIyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "teacher students"
+    },
+    {
+      "id": "gallery-5",
+      "description": "At a university opening ceremony",
+      "imageUrl": "https://images.unsplash.com/photo-1658803133743-2e1b1740add5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxjZXJlbW9ueSUyMGV2ZW50fGVufDB8fHx8MTc1OTUyOTAxMnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "ceremony event"
+    },
+    {
+      "id": "gallery-6",
+      "description": "Formal event with international partners",
+      "imageUrl": "https://images.unsplash.com/photo-1527529482837-4698179dc6ce?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxmb3JtYWwlMjBldmVudHxlbnwwfHx8fDE3NTk1MjkwMTN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "formal event"
+    },
+    {
+      "id": "gallery-7",
+      "description": "University campus aerial view",
+      "imageUrl": "https://images.unsplash.com/photo-1603857365671-93cd96dc1df8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxjYW1wdXMlMjBhZXJpYWx8ZW58MHx8fHwxNzU5NTA0OTM4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "campus aerial"
+    },
+    {
+      "id": "gallery-8",
+      "description": "Library interior",
+      "imageUrl": "https://images.unsplash.com/photo-1463143296037-46790ff95a7e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxsaWJyYXJ5JTIwaW50ZXJpb3J8ZW58MHx8fHwxNzU5NDUxNTEzfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "library interior"
+    },
+    {
+      "id": "testimonial-1",
+      "description": "Portrait of a grateful student",
+      "imageUrl": "https://images.unsplash.com/photo-1631131428457-3c14bdcb81d4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxzdHVkZW50JTIwc21pbGluZ3xlbnwwfHx8fDE3NTk0MDg4NTl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "student smiling"
+    },
+    {
+      "id": "testimonial-2",
+      "description": "Portrait of a proud colleague",
+      "imageUrl": "https://images.unsplash.com/photo-1551836022-deb4988cc6c0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHx3b21hbiUyMHByb2Zlc3Npb25hbHxlbnwwfHx8fDE3NTk0NzU3Mzd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "woman professional"
+    },
+    {
+      "id": "testimonial-3",
+      "description": "Portrait of a community leader",
+      "imageUrl": "https://images.unsplash.com/photo-1656338997878-279d71d48f6e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxtYW4lMjBzbWlsaW5nfGVufDB8fHx8MTc1OTQ3OTQ2Nnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "man smiling"
+    }
+  ]
 }
