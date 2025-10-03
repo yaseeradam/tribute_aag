@@ -3,8 +3,10 @@ import { PlaceHolderImages } from "@/lib/placeholder-images";
 import {
   Dialog,
   DialogContent,
+  DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
+import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
 
 export default function GalleryPage() {
   const galleryImages = PlaceHolderImages.filter((img) =>
@@ -40,6 +42,11 @@ export default function GalleryPage() {
                 </div>
               </DialogTrigger>
               <DialogContent className="max-w-4xl p-2">
+                 <DialogTitle asChild>
+                    <VisuallyHidden>
+                      <h2>{image.description}</h2>
+                    </VisuallyHidden>
+                  </DialogTitle>
                  <div className="relative aspect-video w-full">
                     <Image
                         src={image.imageUrl}
