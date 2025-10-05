@@ -29,6 +29,8 @@ const nextConfig: NextConfig = {
         pathname: '/**',
       },
     ],
+    domains: ['localhost'],
+    unoptimized: process.env.NODE_ENV === 'development',
   },
 };
 

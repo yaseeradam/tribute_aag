@@ -17,8 +17,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent } from "@/components/ui/card";
-import { guestbookEntries } from "@/lib/data";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import type { GuestbookEntry } from "@/lib/definitions";
 
 const formSchema = z.object({
@@ -32,7 +31,7 @@ const formSchema = z.object({
 
 export default function GuestbookPage() {
   const { toast } = useToast();
-  const [entries, setEntries] = useState<GuestbookEntry[]>(guestbookEntries);
+  const [entries, setEntries] = useState<GuestbookEntry[]>([]);
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -42,13 +41,29 @@ export default function GuestbookPage() {
     },
   });
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    const newEntry: GuestbookEntry = {
-      ...values,
-      date: "Just now",
-    };
-    setEntries([newEntry, ...entries]);
+  useEffect(() => {
+    fetchMessages();
+  }, []);
+
+  const fetchMessages = async () => {
+    const response = await fetch('/api/messages');
+    const data = await response.json();
+    setEntries(data.map((msg: any) => ({
+      name: msg.name,
+      message: msg.message,
+      date: new Date(msg.date).toLocaleString()
+    })));
+  };
+
+  async function onSubmit(values: z.infer<typeof formSchema>) {
+    await fetch('/api/messages', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(values)
+    });
+    
     form.reset();
+    fetchMessages();
     
     toast({
       title: "Message Submitted!",

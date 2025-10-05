@@ -1,5 +1,5 @@
 import { BookOpen, Award, University, Users, Star, GraduationCap } from 'lucide-react';
-import type { NavLink, Achievement, Institution, Quote, Testimonial, GuestbookEntry } from './definitions';
+import type { NavLink, Achievement, Institution, Quote, Testimonial } from './definitions';
 
 export const navLinks: NavLink[] = [
   { href: '/', label: 'Home' },
@@ -114,20 +114,4 @@ export const testimonials: Testimonial[] = [
     }
 ];
 
-export const guestbookEntries: GuestbookEntry[] = [
-    {
-        name: "John Doe",
-        message: "An amazing tribute to an inspiring leader. Thank you for sharing his story.",
-        date: "2 hours ago"
-    },
-    {
-        name: "Jane Smith",
-        message: "Professor Gwarzo is a true visionary. His work in education has changed so many lives. May he continue to be a beacon of hope.",
-        date: "1 day ago"
-    },
-     {
-        name: "David Chen",
-        message: "What a beautiful website. It perfectly captures the essence of his contributions. Well done!",
-        date: "3 days ago"
-    }
-];
+

@@ -12,7 +12,7 @@ import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 
-const INITIAL_IMAGE_COUNT = 8;
+const INITIAL_IMAGE_COUNT = 4;
 const IMAGES_TO_LOAD = 4;
 
 export default function GalleryPage() {
