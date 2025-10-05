@@ -1,69 +1,63 @@
 import { achievements } from "@/lib/data";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { cn } from "@/lib/utils";
+import { Card, CardContent } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
 
 export default function AchievementsPage() {
   return (
-    <div className="animate-in fade-in duration-500 bg-secondary/30">
-      <div className="container mx-auto px-4 py-16 md:py-24">
-        <div className="text-center mb-12 md:mb-20">
-          <h1 className="text-4xl md:text-6xl font-headline text-primary">
-            A Legacy of Excellence
+    <div className="min-h-screen bg-gradient-to-br from-background via-secondary/20 to-accent/10">
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center mb-16">
+          <Badge variant="outline" className="mb-4 text-sm font-medium">
+            MILESTONES & HONORS
+          </Badge>
+          <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent mb-6">
+            Achievements
           </h1>
-          <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto">
-            Honoring the significant milestones, prestigious awards, and transformative contributions of Professor Gwarzo.
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+            A journey of excellence, innovation, and transformative impact in education
           </p>
         </div>
 
-        <div className="relative">
-          <div className="absolute left-1/2 -translate-x-1/2 h-full w-0.5 bg-border hidden md:block" aria-hidden="true"></div>
-          
-          <div className="space-y-12">
-            {achievements.map((achievement, index) => (
-              <div key={achievement.title} className="md:grid md:grid-cols-2 md:gap-x-12 relative">
-                <div className={cn("flex items-center", index % 2 === 0 ? "justify-end" : "justify-start col-start-2")}>
-                  <TimelineContent achievement={achievement} index={index} />
-                </div>
-
-                <div className="hidden md:flex justify-center items-center">
-                   <div className="h-6 w-6 rounded-full bg-accent border-4 border-background z-10"></div>
-                </div>
-
-                <div className={cn("flex items-center", index % 2 !== 0 ? "justify-start" : "justify-end col-start-1 row-start-1")}>
-                  {index % 2 !== 0 && (
-                    <div className="md:hidden">
-                       <TimelineContent achievement={achievement} index={index} />
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {achievements.map((achievement, index) => {
+            const Icon = achievement.icon;
+            return (
+              <Card key={achievement.title} className="group relative overflow-hidden border-0 bg-card/50 backdrop-blur-sm hover:bg-card/80 transition-all duration-500 hover:scale-105 hover:shadow-2xl">
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                
+                <CardContent className="p-8 relative z-10">
+                  <div className="flex items-center justify-between mb-6">
+                    <div className="p-4 rounded-2xl bg-gradient-to-br from-primary to-accent text-white shadow-lg group-hover:shadow-xl transition-shadow duration-300">
+                      <Icon className="h-8 w-8" />
                     </div>
-                  )}
-                </div>
-              </div>
-            ))}
+                    <Badge variant="secondary" className="text-xs font-bold px-3 py-1">
+                      {achievement.year}
+                    </Badge>
+                  </div>
+                  
+                  <h3 className="text-xl font-bold text-foreground mb-4 leading-tight group-hover:text-primary transition-colors duration-300">
+                    {achievement.title}
+                  </h3>
+                  
+                  <p className="text-muted-foreground leading-relaxed text-sm">
+                    {achievement.description}
+                  </p>
+                  
+                  <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-primary to-accent transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
+                </CardContent>
+              </Card>
+            );
+          })}
+        </div>
+        
+        <div className="text-center mt-16">
+          <div className="inline-flex items-center gap-2 text-sm text-muted-foreground">
+            <div className="w-2 h-2 rounded-full bg-primary animate-pulse" />
+            <span>Building the future of education, one milestone at a time</span>
+            <div className="w-2 h-2 rounded-full bg-accent animate-pulse" />
           </div>
         </div>
       </div>
     </div>
-  );
-}
-
-function TimelineContent({ achievement, index }: { achievement: (typeof achievements)[0], index: number }) {
-  const Icon = achievement.icon;
-  const alignment = index % 2 === 0 ? 'md:text-right' : 'md:text-left';
-  const cardAlignment = index % 2 === 0 ? 'md:items-end' : 'md:items-start';
-
-  return (
-    <Card className="w-full shadow-lg hover:shadow-xl transition-shadow duration-300">
-      <CardHeader className={cn("flex flex-col", cardAlignment)}>
-        <div className="flex items-center gap-4" dir={index % 2 === 0 ? 'rtl' : 'ltr'}>
-          <div className="bg-primary text-primary-foreground p-3 rounded-full">
-            <Icon className="h-6 w-6" />
-          </div>
-          <time className={cn("font-bold text-accent text-lg", alignment)}>{achievement.year}</time>
-        </div>
-        <CardTitle className={cn("font-headline text-2xl mt-2", alignment)}>{achievement.title}</CardTitle>
-      </CardHeader>
-      <CardContent className={cn(alignment)}>
-        <p className="text-muted-foreground">{achievement.description}</p>
-      </CardContent>
-    </Card>
   );
 }

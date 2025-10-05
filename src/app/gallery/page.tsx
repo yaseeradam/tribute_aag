@@ -16,9 +16,7 @@ const INITIAL_IMAGE_COUNT = 4;
 const IMAGES_TO_LOAD = 4;
 
 export default function GalleryPage() {
-  const galleryImages = PlaceHolderImages.filter((img) =>
-    img.id.startsWith("gallery-")
-  );
+  const galleryImages = PlaceHolderImages;
 
   const [visibleCount, setVisibleCount] = useState(INITIAL_IMAGE_COUNT);
 

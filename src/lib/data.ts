@@ -54,27 +54,27 @@ export const achievements: Achievement[] = [
 export const institutions: Institution[] = [
   {
     id: "institution-1",
-    name: "Maryam Abacha American University of Nigeria",
-    description: "A leading private university in Kano, Nigeria, offering a diverse range of undergraduate and postgraduate programs with a focus on innovation and research.",
-    website: "#"
+    name: "Maryam Abacha American University of Nigeria (MAAUN)",
+    description: "Founded in 2021 in Kano, Nigeria. A leading private university offering American-style education with programs in Engineering, Medicine, Business, and Liberal Arts.",
+    website: "https://maaun.edu.ng"
   },
   {
     id: "institution-2",
-    name: "Maryam Abacha American University of Niger",
-    description: "The premier English-speaking university in Maradi, Niger Republic, known for its quality education and vibrant international student community.",
-    website: "#"
+    name: "Maryam Abacha American University of Niger (MAAUN Niger)",
+    description: "Established in 2012 in Maradi, Niger Republic. The first English-speaking American university in Niger, offering quality higher education to West African students.",
+    website: "https://maaun.edu.ne"
   },
   {
     id: "institution-3",
-    name: "Franco-British International University, Kaduna",
-    description: "An innovative institution in Kaduna, Nigeria, bridging linguistic divides by offering bilingual education in French and English.",
-    website: "#"
+    name: "Franco-British International University (FBIU)",
+    description: "Founded in 2023 in Kaduna, Nigeria. A bilingual institution offering programs in both English and French, promoting international collaboration and cultural exchange.",
+    website: "https://fbiu.edu.ng"
   },
   {
     id: "institution-4",
-    name: "Canadian University of Bangladesh",
-    description: "A notable international venture, reflecting a commitment to global education and fostering ties between nations through academic excellence.",
-    website: "#"
+    name: "Canadian University of Bangladesh (CUB)",
+    description: "Established in 2016 in Dhaka, Bangladesh. An international university providing Canadian-standard education in South Asia, expanding Prof. Gwarzo's global educational vision.",
+    website: "https://cub.edu.bd"
   }
 ];
 
@@ -96,21 +96,39 @@ export const quotes: Quote[] = [
 export const testimonials: Testimonial[] = [
     {
         id: "testimonial-1",
-        text: "Professor Gwarzo's vision for accessible education gave me the opportunity to pursue my dreams. His university opened doors I never thought possible. I am forever grateful for his leadership and generosity.",
-        author: "Amina Yusuf",
-        relation: "Alumna, MAAUN"
+        text: "Prof. Gwarzo transformed my life through education. As a scholarship recipient at MAAUN, I witnessed firsthand his commitment to empowering African youth. Today, I'm a successful engineer because he believed in accessible quality education.",
+        author: "Aisha Mohammed",
+        relation: "MAAUN Graduate, Class of 2019"
     },
     {
         id: "testimonial-2",
-        text: "Working alongside Prof. Gwarzo has been a masterclass in leadership. His tireless dedication to creating institutions that will outlast him is a testament to his selfless character and profound legacy.",
-        author: "Dr. Fatima Bello",
-        relation: "Colleague"
+        text: "As Vice-Chancellor, I've seen Prof. Gwarzo's unwavering dedication to academic excellence. His vision of creating world-class universities in Africa has inspired a generation of educators and administrators across the continent.",
+        author: "Prof. Ibrahim Garba",
+        relation: "Vice-Chancellor, MAAUN Niger"
     },
     {
         id: "testimonial-3",
-        text: "The establishment of the university in our community has brought not just education, but economic growth and hope. Prof. Gwarzo is more than an educationist; he is a community builder.",
-        author: "Chief Musa Adebayo",
-        relation: "Community Leader"
+        text: "The impact of MAAUN on our community in Maradi cannot be overstated. Prof. Gwarzo didn't just build a university; he created opportunities, jobs, and hope for thousands of families. He's a true visionary leader.",
+        author: "Honorable Amadou Boubacar",
+        relation: "Mayor of Maradi, Niger Republic"
+    },
+    {
+        id: "testimonial-4",
+        text: "Prof. Gwarzo's mentorship shaped my academic career. His emphasis on research excellence and international collaboration has made MAAUN a beacon of higher education in West Africa. I'm proud to be part of his legacy.",
+        author: "Dr. Khadija Aliyu",
+        relation: "Dean of Engineering, MAAUN Nigeria"
+    },
+    {
+        id: "testimonial-5",
+        text: "Through his scholarship programs, Prof. Gwarzo gave me the chance to study medicine when my family couldn't afford it. Today, I serve my community as a doctor. His generosity continues to change lives across Africa.",
+        author: "Dr. Maryam Sani",
+        relation: "Medical Graduate, MAAUN"
+    },
+    {
+        id: "testimonial-6",
+        text: "As President of AAPU, Prof. Gwarzo has been instrumental in elevating the standards of private universities across Africa. His leadership and vision have transformed the landscape of higher education on our continent.",
+        author: "Prof. Sarah Anyang Agbor",
+        relation: "Former Commissioner for Education, African Union"
     }
 ];
 

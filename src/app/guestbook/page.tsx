@@ -4,29 +4,17 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import * as z from "zod";
 import { useToast } from "@/hooks/use-toast";
-
+import { useState, useEffect } from "react";
+import type { GuestbookEntry } from "@/lib/definitions";
 import { Button } from "@/components/ui/button";
-import {
-  Form,
-  FormControl,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage,
-} from "@/components/ui/form";
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent } from "@/components/ui/card";
-import { useState, useEffect } from "react";
-import type { GuestbookEntry } from "@/lib/definitions";
 
 const formSchema = z.object({
-  name: z.string().min(2, {
-    message: "Name must be at least 2 characters.",
-  }),
-  message: z.string().min(10, {
-    message: "Message must be at least 10 characters.",
-  }),
+  name: z.string().min(2, { message: "Name must be at least 2 characters." }),
+  message: z.string().min(10, { message: "Message must be at least 10 characters." }),
 });
 
 export default function GuestbookPage() {
@@ -35,10 +23,7 @@ export default function GuestbookPage() {
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
-    defaultValues: {
-      name: "",
-      message: "",
-    },
+    defaultValues: { name: "", message: "" },
   });
 
   useEffect(() => {
@@ -84,7 +69,6 @@ export default function GuestbookPage() {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
-          {/* Form Section */}
           <div className="lg:col-span-1">
             <Card className="p-6 md:p-8 shadow-lg">
               <h3 className="text-2xl font-headline text-primary mb-6">Write a Message</h3>
@@ -128,7 +112,6 @@ export default function GuestbookPage() {
             </Card>
           </div>
 
-          {/* Entries Section */}
           <div className="lg:col-span-2">
             <h3 className="text-2xl font-headline text-primary mb-6">Recent Entries</h3>
             <div className="space-y-6">
